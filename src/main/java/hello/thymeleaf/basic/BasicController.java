@@ -56,6 +56,7 @@ public class BasicController {
 		return "basic/variable";
 	}
 
+	//basic objects are no longer available
 	@GetMapping("/basic-objects")
 	public String basicObjects(HttpSession session) {
 		session.setAttribute("sessionData", "Hello Session");
@@ -72,7 +73,14 @@ public class BasicController {
 	@GetMapping("/date")
 	public String data(Model model) {
 		model.addAttribute("localDateTime", LocalDateTime.now());
-		return "date";
+		return "basic/date";
+	}
+
+	@GetMapping("/link")
+	public String link(Model model) {
+		model.addAttribute("param1", "data1");
+		model.addAttribute("param2", "data2");
+		return "basic/link";
 	}
 
 	@Data
