@@ -17,6 +17,10 @@ import java.util.Map;
 @Controller
 @RequestMapping("/basic")
 public class BasicController {
+	@GetMapping()
+	public String basic(){
+		return "basic/basic";
+	}
 
 	/*
 	HTML 앤티티
