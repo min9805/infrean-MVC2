@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-public class ApiExceptionV2Controller {
+public class ApiExceptionV3Controller {
 
-	@GetMapping("/api2/members/{id}")
+	@GetMapping("/api3/members/{id}")
 	public MemberDto getMember(@PathVariable("id") String id) {
 
 		if (id.equals("ex")) {
